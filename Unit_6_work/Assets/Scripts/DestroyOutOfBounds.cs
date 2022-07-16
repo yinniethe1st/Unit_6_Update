@@ -7,7 +7,7 @@ public class DestroyOutOfBounds : MonoBehaviour
 
     public float topBounds = 30.0f;
 
-    public float loweBounds = -10.0f;
+    public float loweBounds = -20.0f;
 
      
   
@@ -21,13 +21,13 @@ public class DestroyOutOfBounds : MonoBehaviour
     {
         if(transform.position.z > topBounds )
         {
-            Destroy(GameObject);
+            Destroy(gameObject);
         }   
 
         else if(transform.position.z < loweBounds)
         {
             Debug.Log("Game OVer!");
-            Destroy(GameObject);
+            Destroy(gameObject);
             // Time.timeScale = 0;
         }
     }
