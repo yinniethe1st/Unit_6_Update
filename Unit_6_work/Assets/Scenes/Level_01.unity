@@ -641,3 +641,5 @@ MonoBehaviour:
   horizontalInput: 0
   speed: 25
   xRange: 20
+  blaster: {fileID: 1133614563}
+  lazerBolt: {fileID: 6237884559650293305, guid: fcff7a24af0ad6a48ba3b98bccf23258, type: 3}
