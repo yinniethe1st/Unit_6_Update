@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
 
    public float xRange = 30;
 
+   public transform blaster;
+   
+   public GameObject lazerBolt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +42,10 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange,transform.position.y, transform.position.z);
         }
         
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            // create lazerBolt at the blaster transform position maintaining the objects position rotation. 
+            Instantiate(laserBolt, blaster.transform.position, lazerBolt.transform.rotation );
+        }
     }
 }
