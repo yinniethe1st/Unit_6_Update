@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
 
     public float xRange = 40;
 
+    public transform blaster;
+
+    public GameObject lazerBolt;
+
 
     // Update is called once per frame
     void Update()
@@ -30,6 +34,12 @@ public class PlayerController : MonoBehaviour
         if(transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            // Create lazerBolt at the blaster transform position maintaining object position
+            Instantiate(lazerBolt, blaster.position, lazerBolt.transform.rotation);
         }
 
 
