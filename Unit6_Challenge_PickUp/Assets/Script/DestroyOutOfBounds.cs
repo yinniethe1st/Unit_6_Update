@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    public float topBounds = 330.0f;
-    public float lowerBounds = 100.0f;
+    public float topBounds = 100.0f;
+    public float lowerBounds = 40.0f;
 
   
     void Awake()
