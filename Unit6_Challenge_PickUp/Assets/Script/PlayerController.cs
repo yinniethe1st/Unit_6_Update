@@ -38,21 +38,20 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            // Create lazerBolt at the blaster transform position maintaining object position
-            Instantiate(lazerBolt, blaster.position, lazerBolt.transform.rotation);
-        }
+        // if(Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     // Create lazerBolt at the blaster transform position maintaining object position
+        //     Instantiate(lazerBolt, blaster.position, lazerBolt.transform.rotation);
+        // }
 
 
 
     }
 
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     Destroy(other.gameObject);
-
-    // }
+    private void OntriggerEnter(Collider collision)
+    {
+        Debug.Log("Colliding");
+    }
 
 
 }
