@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] ufoPrefabs; // Array to store UFO ships
+
+    public int ufoIndex;
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        Instantiate(ufoPrefabs[ufoIndex], new Vector3(0,0,0), ufoPrefabs[ufoIndex].transform.rotation);
     }
 }
