@@ -12,6 +12,7 @@ public class EnemySpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(ufoPrefabs[ufoIndex], new Vector3(0,0,0), ufoPrefabs[ufoIndex].transform.rotation);
+        if(Input.GetKeyDown(KeyCode.S))
+        Instantiate(ufoPrefabs[ufoIndex], new Vector3(0,0,15), ufoPrefabs[ufoIndex].transform.rotation);
     }
 }
