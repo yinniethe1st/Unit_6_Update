@@ -1371,6 +1371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy
       objectReference: {fileID: 0}
+    - target: {fileID: 1754193763714287203, guid: d1d48a12063700f40bd550bbfbd70af7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2277283979662299186, guid: d1d48a12063700f40bd550bbfbd70af7, type: 3}
     - {fileID: 2277283978686959311, guid: d1d48a12063700f40bd550bbfbd70af7, type: 3}
