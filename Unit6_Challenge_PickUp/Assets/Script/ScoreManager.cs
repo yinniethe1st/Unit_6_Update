@@ -26,6 +26,6 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScoreText() // This method updates the score in the HUD UI text
     {
-        scoreText = "Score: " + score;
+        scoreText.text = "Score: " + score;
     }
 }
