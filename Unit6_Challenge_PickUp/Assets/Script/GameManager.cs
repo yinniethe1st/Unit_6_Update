@@ -4,12 +4,36 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-   public static GameManager instance;
+   public bool isGameOver;
 
-   private void Awake()
+   private GameObject gameOverText;
+
+   void Awake()
    {
-    instance = this;
+      Time.timeScale = 1;
+      isGameOver = false;
+
    }
 
-   public GameObject player;
+   void Start()
+   {
+      gameOverText = GameObject.Find("GameOverText");
+
+   }
+   // Update is called once per frame
+   void update()
+   {
+      if(isGameOver)
+      {
+         EndGame(); // Start EndGame method
+      }
+      else
+         gameOverText.gameObject.SetActive(false); // Keep UI Text Game Over Hidden
+   }
+
+   public void EndGame()
+   {
+      gameOverText.gameObject.SetActive(true);
+      Time.timeScale = 0; // Freeze Time
+   }
 }
