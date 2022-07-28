@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); // Reference GameManager script on GameManager Object
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -32,30 +33,30 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector3.right * horizonalInput * Time.deltaTime * speed);
         // Keep player in bound
-        if(transform.position.x < -xRange)
+
+        if(transform.position.x < -xRange )
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
         // Right side wall
-        if(transform.position.x > xRange)
+        if(transform.position.x > xRange )
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
-        {
+        if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false ) // 
             // Create lazerBolt at the blaster transform position maintaining object position
-            Instantiate(lazerBolt, blaster.position, lazerBolt.transform.rotation);
-        }
+        {
 
+        }    Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);
 
 
     }
-
-    private void OntriggerEnter(Collider collision)
-    {
-        Debug.Log("Colliding");
-    }
-
 
 }
+
+
+    // private void OntriggerEnter(Collider collision)
+    // {
+    //     Debug.Log("Colliding");
+    // }
