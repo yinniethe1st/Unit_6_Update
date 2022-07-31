@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.Events;
+
 using UnityEngine.UI;
 using System.Globalization;
 
@@ -9,17 +12,24 @@ using System.Globalization;
 
 public class TextLableBehaviour : MonoBehaviour
 {
-    public Text label;
-    public FloatData dataObj;
+    private Text label;
+    public UnityEvent startEvent;
 
     private void Start()
     {
         label = GetComponent<Text>();
-        UpdateLabel();
+        startEvent.Invoke();
+        
     }
 
-    public void UpdateLabel()
+    public void UpdateLabel(FloatData obj)
     {
-        label.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
+        label.text = obj.value.ToString(CultureInfo.InvariantCulture);
+    }
+
+    public void UpdateLabel(IntData obj)
+    {
+        label.text = obj.value.ToString(CultureInfo.InvariantCulture);
+
     }
 }
