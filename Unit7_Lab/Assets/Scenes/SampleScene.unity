@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 1344108686}
   - component: {fileID: 1344108685}
   - component: {fileID: 1344108689}
+  - component: {fileID: 1344108690}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -450,7 +451,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e56fccd345fb140bae1c61142719ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: ac9e77aef643f574eb7fb9cab5326f06, type: 2}
+  idObj: {fileID: 11400000, guid: e9917565a39d53242bb9bc2a4d557637, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1344108690}
+        m_TargetAssemblyTypeName: SpriteBehaviour, Assembly-CSharp
+        m_MethodName: ChangeRenderColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e9917565a39d53242bb9bc2a4d557637, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ColorID, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1344108690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344108683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b312ed0d9d32df419c8f9eb05f20e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1485160048
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c009c02baa973be499624821903d3f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: 9b65c34de16078d4fb441b17f7b7db80, type: 2}
+  idObj: {fileID: 11400000, guid: e9917565a39d53242bb9bc2a4d557637, type: 2}
   matchEvent:
     m_PersistentCalls:
       m_Calls:
@@ -710,6 +738,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 9b65c34de16078d4fb441b17f7b7db80, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &2103729627
 Rigidbody:
   m_ObjectHideFlags: 0
