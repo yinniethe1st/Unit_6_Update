@@ -5,4 +5,5 @@ using UnityEngine;
 public class IdContainerBehaviour : MonoBehaviour
 {
     public ID idObj;
+
 }
