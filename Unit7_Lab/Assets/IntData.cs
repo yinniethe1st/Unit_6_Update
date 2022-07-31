@@ -7,16 +7,17 @@ using UnityEngine.Events;
 
 public class IntData : ScriptableObject
 {
-    public UnityEvent disableEvent;
+        public int value;
 
-    public int value;
+    // public UnityEvent disableEvent;
+
 
     public void SetValue(int num)
     {
         value = num;
     }
 
-    public void SetValue (IntData obj)
+    public void SetValue(IntData obj)
     {
         value = obj.value;
     }
@@ -28,9 +29,9 @@ public class IntData : ScriptableObject
 
     
 
-    private void OnDisable()
-    {
-        disableEvent.Invoke();
-    }
+    // private void OnDisable()
+    // {
+    //     disableEvent.Invoke();
+    // }
 
 }
