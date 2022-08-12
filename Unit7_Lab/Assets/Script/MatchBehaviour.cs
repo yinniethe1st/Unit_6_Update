@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 public class MatchBehaviour : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class MatchBehaviour : MonoBehaviour
     // private ID otherID;
     public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
     
-    private IEnumerator OnTriggerEnter(Collider other)
+    private IEnumerator  OnTriggerEnter(Collider other)
     {
         
     // Debug.Log(idObj);
