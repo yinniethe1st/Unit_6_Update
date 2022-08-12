@@ -1,4 +1,4 @@
-// using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class IntData : ScriptableObject
 {
-        public int value;
+    public int value;
 
     // public UnityEvent disableEvent;
 

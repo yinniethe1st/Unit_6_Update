@@ -6,9 +6,9 @@ public class MatchBehaviour : MonoBehaviour
 {
     public ID idObj;
     // private ID otherID;
-    public UnityEvent matchEvent, noMatchEvent;
+    public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
     
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
         
     // Debug.Log(idObj);
@@ -18,7 +18,7 @@ public class MatchBehaviour : MonoBehaviour
         // if (temp0bj != null) otherID = temp0bj.idObj;
 
         if (temp0bj == null)
-            return;
+            yield break;
 
         var otherID = temp0bj.idObj;
 
@@ -29,6 +29,8 @@ public class MatchBehaviour : MonoBehaviour
         else 
         {
             noMatchEvent.Invoke();
+            yield return new WaitForSeconds(0.5f);
+            noMatchDelayedEvent.Invoke();
         }
 
     }
