@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 622443713}
   - component: {fileID: 622443712}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GoLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1796,7 +1796,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repeatEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 383408323}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: On
+          m_BoolArgument: 0
+        m_CallState: 2
   counterNum: 3
   seconds: 3
 --- !u!4 &1466268481
