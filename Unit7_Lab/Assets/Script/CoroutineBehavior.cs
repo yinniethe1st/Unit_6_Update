@@ -5,29 +5,30 @@ using UnityEngine;
 public class CoroutineBehavior : MonoBehaviour
 {
     public bool canRun = true;
+    public float seconds = 3.0f;
+    private WaitForSeconds wfsObj;
+    private WaitForFixedUpdate wffuObj;
+
 
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        Debug.Log(" start");
+        
+        wfsObj = new WaitForSeconds(seconds);
+        wffuObj = new WaitForFixedUpdate();
 
-        yield return new WaitForSeconds(3);
+        yield return wfsObj;
         Debug.Log("late start");
     
 
     while (canRun)
     {
     
-        yield return new WaitForFixedUpdate();
+        yield return wffuObj;
         Debug.Log("Run on start");
     }
+
     }
     
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log("Run");
-        
-    }
 }
+
