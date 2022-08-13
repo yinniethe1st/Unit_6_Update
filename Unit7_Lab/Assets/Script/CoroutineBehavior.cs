@@ -7,9 +7,10 @@ public class CoroutineBehavior : MonoBehaviour
 {
     // public bool canRun = true;
 
-    public UnityEvent repeatEvent;
+    public UnityEvent startEvent, repeatEvent, endEvent;
 
-    public int counterNum = 3;
+
+    public IntData counterNum;
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
@@ -21,6 +22,8 @@ public class CoroutineBehavior : MonoBehaviour
         
         wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
+        startEvent.Invoke();
+        yield return wfsObj;
 
     //     yield return wfsObj;
     //     Debug.Log("late start");
@@ -32,13 +35,16 @@ public class CoroutineBehavior : MonoBehaviour
     //     yield return wfsObj;
     //     Debug.Log("Run on start");
     // }
-    while (counterNum > 0)
+    while (counterNum.value > 0)
     {
-        yield return wfsObj;
+        // Debug.Log(counterNum);
         repeatEvent.Invoke();
-        counterNum--;
-        Debug.Log(counterNum);
+        counterNum.value--;
+        yield return wfsObj;
+
+      
     }
+    endEvent.Invoke();
 
 
     }

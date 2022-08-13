@@ -175,33 +175,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0ede23cee79b34cbdb092127e0464b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  label: {fileID: 0}
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 930c74a77ccc78c48b4bdf1720ba08c3, type: 2}
-        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: SetValue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 96f85a7da4810494eb94f7cf32901c01, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 196567127}
-        m_TargetAssemblyTypeName: TextLableBehaviour, Assembly-CSharp
-        m_MethodName: UpdateLabel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 930c74a77ccc78c48b4bdf1720ba08c3, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 11400000, guid: 930c74a77ccc78c48b4bdf1720ba08c3, type: 2}, m_TargetAssemblyTypeName: IntData, Assembly-CSharp, m_MethodName: SetValue, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 11400000, guid: 96f85a7da4810494eb94f7cf32901c01, type: 2}, m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+      - {m_Target: {fileID: 196567127}, m_TargetAssemblyTypeName: TextLableBehaviour, Assembly-CSharp, m_MethodName: UpdateLabel, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 11400000, guid: 930c74a77ccc78c48b4bdf1720ba08c3, type: 2}, m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+    m_CallsDirty: 1
 --- !u!114 &196567128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,6 +700,7 @@ GameObject:
   - component: {fileID: 622443711}
   - component: {fileID: 622443713}
   - component: {fileID: 622443712}
+  - component: {fileID: 622443714}
   m_Layer: 5
   m_Name: GoLabel
   m_TagString: Untagged
@@ -846,6 +827,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622443710}
   m_CullTransparentMesh: 1
+--- !u!114 &622443714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622443710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c338d537d751f734d94088e484d14422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643805114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,21 +1489,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0ede23cee79b34cbdb092127e0464b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  label: {fileID: 0}
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192901746}
-        m_TargetAssemblyTypeName: TextLableBehaviour, Assembly-CSharp
-        m_MethodName: UpdateLabel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 96f85a7da4810494eb94f7cf32901c01, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 1192901746}, m_TargetAssemblyTypeName: TextLableBehaviour, Assembly-CSharp, m_MethodName: UpdateLabel, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 11400000, guid: 96f85a7da4810494eb94f7cf32901c01, type: 2}, m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+    m_CallsDirty: 1
 --- !u!114 &1192901747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,6 +1778,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a08ee9809c3814b98484d0cbe60911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5e4613bceff75724f818848e2da41880, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   repeatEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1809,8 +1808,23 @@ MonoBehaviour:
           m_StringArgument: On
           m_BoolArgument: 0
         m_CallState: 2
-  counterNum: 3
-  seconds: 3
+      - m_Target: {fileID: 622443710}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  counterNum: {fileID: 11400000, guid: 5e4613bceff75724f818848e2da41880, type: 2}
+  seconds: 1
 --- !u!4 &1466268481
 Transform:
   m_ObjectHideFlags: 0
