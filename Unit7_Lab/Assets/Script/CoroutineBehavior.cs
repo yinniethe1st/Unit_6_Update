@@ -35,12 +35,14 @@ public class CoroutineBehavior : MonoBehaviour
     //     yield return wfsObj;
     //     Debug.Log("Run on start");
     // }
+    
     while (counterNum.value > 0)
     {
         // Debug.Log(counterNum);
+        yield return wfsObj;
+
         repeatEvent.Invoke();
         counterNum.value--;
-        yield return wfsObj;
 
       
     }
