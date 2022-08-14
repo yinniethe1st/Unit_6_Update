@@ -7,9 +7,18 @@ using UnityEngine;
 public class Instancer : ScriptableObject
 {
   
+public GameObject prefab;
+
+
   public void CreateInstance(GameObject obj)
   {
-    Instantiate(obj);
 
+    Instantiate(prefab);
+
+  }
+
+  public void CreateInstance (Vector3Data obj)
+  {
+    Instantiate(prefab, obj.value, Quaternion.identity );
   }
 }
