@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421842f4df9f90a49bee06b04e2cca31, type: 3}
-  m_Name: V3D
+  m_Script: {fileID: 11500000, guid: 0b6b2e26fc54bef4f99d029f7e9e83f7, type: 3}
+  m_Name: Blue
   m_EditorClassIdentifier: 
-  value: {x: 4, y: 0, z: 0}
+  value: {r: 1, g: 0, b: 0, a: 1}

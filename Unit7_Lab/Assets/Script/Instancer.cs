@@ -17,7 +17,7 @@ private int num;
 
   }
 
-  public void CreateInstance (Vector3Data obj)
+  public void CreateInstance(Vector3Data obj)
 
   {
     Instantiate(prefab, obj.value, Quaternion.identity);
