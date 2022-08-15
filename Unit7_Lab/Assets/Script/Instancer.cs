@@ -45,5 +45,12 @@ private int num;
     
   }
 
+     public void CreateInstanceFromListRandomly(VectorDataList obj)
+  {
+    num = Random.Range(0, obj.vector3DList.Count - 1);
+    Instantiate(prefab, obj.vector3DList[num].value, Quaternion.identity);
+   
+  }
+
 
 }
