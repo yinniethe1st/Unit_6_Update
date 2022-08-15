@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: V3List
   m_EditorClassIdentifier: 
   vector3DList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f7a864eaa194d5846a5089c2ae03639d, type: 2}
+  - {fileID: 11400000, guid: 1aaf39f1914698643b130057e4e2de49, type: 2}
+  - {fileID: 11400000, guid: b34f739e18db84840a84ef471b6aa880, type: 2}
