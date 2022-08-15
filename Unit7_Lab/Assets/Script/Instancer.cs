@@ -8,7 +8,7 @@ public class Instancer : ScriptableObject
 {
   
 public GameObject prefab;
-
+private int num;
 
   public void CreateInstance(GameObject obj)
   {
@@ -18,17 +18,32 @@ public GameObject prefab;
   }
 
   public void CreateInstance (Vector3Data obj)
+
   {
-    Instantiate(prefab, obj.value, Quaternion.identity );
+    Instantiate(prefab, obj.value, Quaternion.identity);
   }
 
-  public void CreateInstance (VectorDataList obj)
+  public void CreateInstanceFromList(VectorDataList obj)
   {
 
-        for (int i = 0; i < obj.vector3DList.Count; i++)
+        foreach (var t in obj.vector3DList)
         { 
-        Instantiate(prefab, obj.vector3DList[0].value, Quaternion.identity );
+        Instantiate(prefab, t.value, Quaternion.identity);
         }
   }
+
+
+
+   public void CreateInstanceFromListCounting(VectorDataList obj)
+  {
+    Instantiate(prefab, obj.vector3DList[num].value, Quaternion.identity);
+    num ++;  
+        if (num == obj.vector3DList.Count)
+        {
+            num = 0;
+        }
+    
+  }
+
 
 }
